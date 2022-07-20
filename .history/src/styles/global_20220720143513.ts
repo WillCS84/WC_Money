@@ -84,11 +84,10 @@ export const GlobalStyle = createGlobalStyle`
     background: transparent;
     
     transition: filter 0.2s;
-    transition: transform 0.6s;
 
     &:hover {
       filter: brightness(0.9);
-      transform: rotate(-90deg)
+      background-color: blue;
     }
   }
 

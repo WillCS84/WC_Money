@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 0.25rem;
   }
 
-  .react-modal-close {
+  .react-modal-overlay {
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
@@ -84,11 +84,9 @@ export const GlobalStyle = createGlobalStyle`
     background: transparent;
     
     transition: filter 0.2s;
-    transition: transform 0.6s;
 
     &:hover {
-      filter: brightness(0.9);
-      transform: rotate(-90deg)
+      filter: brightness(0.9)
     }
   }
 

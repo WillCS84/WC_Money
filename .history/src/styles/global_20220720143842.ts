@@ -88,7 +88,7 @@ export const GlobalStyle = createGlobalStyle`
 
     &:hover {
       filter: brightness(0.9);
-      transform: rotate(-90deg)
+      transform: rotate(90deg)
     }
   }
 
