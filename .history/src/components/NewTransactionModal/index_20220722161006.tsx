@@ -10,7 +10,7 @@ interface NewTransactionModalProps {
   onRequestClose: () => void;
 }
 
-Modal.setAppElement("#root");
+Modal.setAppElement("root");
 
 export function NewTransactionModal({
   isOpen,
@@ -85,9 +85,7 @@ export function NewTransactionModal({
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         />
-        <button type="submit" onClick={handleCreateNewTransaction}>
-          Cadastrar
-        </button>
+        <button type="submit">Cadastrar</button>
       </Container>
     </Modal>
   );

@@ -25,7 +25,7 @@ export function NewTransactionModal({
     event.preventDefault();
     console.log(title, value, category, type);
   }
-
+  console.log(title, value, category, type);
   return (
     <Modal
       isOpen={isOpen}
@@ -85,9 +85,7 @@ export function NewTransactionModal({
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         />
-        <button type="submit" onClick={handleCreateNewTransaction}>
-          Cadastrar
-        </button>
+        <button type="submit" onClick={()=> {alert("cadastrar")}}}>Cadastrar</button>
       </Container>
     </Modal>
   );

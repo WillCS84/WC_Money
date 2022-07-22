@@ -44,7 +44,6 @@ export const Container = styled.div`
     &:hover {
       filter: brightness(0.9);
       border: 3px solid var(--neongreen);
-      color: var(--neongreen);
     }
   }
 `;
@@ -62,8 +61,8 @@ interface RadioBox {
 }
 
 const colors = {
-  green: "#CCFFCC",
-  red: "#FFCCCC",
+  green: "#90EE90",
+  red: "#FF6666",
 };
 
 export const RadioBox = styled.button<RadioBox>`

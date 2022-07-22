@@ -22,7 +22,7 @@ export function NewTransactionModal({
   const [value, setValue] = useState(0);
 
   function handleCreateNewTransaction(event: FormEvent) {
-    event.preventDefault();
+    // event.preventDefault();
     console.log(title, value, category, type);
   }
 
@@ -85,7 +85,7 @@ export function NewTransactionModal({
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         />
-        <button type="submit" onClick={handleCreateNewTransaction}>
+        <button type="submit" onSubmit={handleCreateNewTransaction}>
           Cadastrar
         </button>
       </Container>

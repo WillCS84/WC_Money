@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     --red: #e52e4d;
     --blue: #5429cc;
     --green: #33cc95;
-    --neongreen: #ADFF2F;
+    --darkGreen #006400;
 
     --blue-light: #6933ff;
 
@@ -89,8 +89,7 @@ export const GlobalStyle = createGlobalStyle`
 
     &:hover {
       filter: brightness(0.9);
-      transform: rotate(-90deg);
-      
+      transform: rotate(-90deg)
     }
   }
 

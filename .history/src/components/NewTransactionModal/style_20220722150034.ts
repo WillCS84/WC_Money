@@ -40,11 +40,11 @@ export const Container = styled.div`
     font-weight: 600;
 
     transition: filter 0.2s;
+    transition: border-color 0.2s;
 
     &:hover {
       filter: brightness(0.9);
-      border: 3px solid var(--neongreen);
-      color: var(--neongreen);
+      border: 2px solid var(--neongreen);
     }
   }
 `;
@@ -54,46 +54,34 @@ export const TransactionTypeContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
-`;
 
-interface RadioBox {
-  isActive: boolean;
-  activeColor: "green" | "red";
-}
-
-const colors = {
-  green: "#CCFFCC",
-  red: "#FFCCCC",
-};
-
-export const RadioBox = styled.button<RadioBox>`
-  height: 4rem;
-  border: 1px solid #d7d7d7;
-  border-radius: 0.25rem;
-
-  background: ${(props) =>
-    props.isActive ? colors[props.activeColor] : "transparent"};
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: border-color 0.1s;
-
-  &:hover {
-    border: 3px solid var(--neongreen);
+  button {
+    height: 4rem;
+    border: 1px solid #d7d7d7;
     border-radius: 0.25rem;
-  }
 
-  img {
-    width: 20px;
-    height: 20px;
-  }
+    background: transparent;
 
-  span {
-    display: inline-block;
-    margin-left: 1rem;
-    font-size: 1rem;
-    color: var(--text-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: border-color 0.1s;
+
+    &:hover {
+      border-color: var(--green);
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 1rem;
+      color: var(--text-title);
+    }
   }
 `;

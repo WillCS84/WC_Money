@@ -10,8 +10,6 @@ interface NewTransactionModalProps {
   onRequestClose: () => void;
 }
 
-Modal.setAppElement("#root");
-
 export function NewTransactionModal({
   isOpen,
   onRequestClose,
@@ -23,7 +21,6 @@ export function NewTransactionModal({
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
-    console.log(title, value, category, type);
   }
 
   return (
@@ -47,12 +44,12 @@ export function NewTransactionModal({
         <input
           placeholder="Título"
           value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          onChange={(event) => event.target.value}
         />
         <input
           placeholder="Valor"
           value={value}
-          onChange={(event) => setValue(Number(event.target.value))}
+          onChange={(event) => event.target.value}
         />
 
         <TransactionTypeContainer>
@@ -83,11 +80,9 @@ export function NewTransactionModal({
         <input
           placeholder="Categoria"
           value={category}
-          onChange={(event) => setCategory(event.target.value)}
+          onChange={(event) => event.target.value}
         />
-        <button type="submit" onClick={handleCreateNewTransaction}>
-          Cadastrar
-        </button>
+        <button type="submit">Cadastrar</button>
       </Container>
     </Modal>
   );

@@ -10,8 +10,6 @@ interface NewTransactionModalProps {
   onRequestClose: () => void;
 }
 
-Modal.setAppElement("#root");
-
 export function NewTransactionModal({
   isOpen,
   onRequestClose,
@@ -23,7 +21,6 @@ export function NewTransactionModal({
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
-    console.log(title, value, category, type);
   }
 
   return (
@@ -44,16 +41,8 @@ export function NewTransactionModal({
       <Container onSubmit={handleCreateNewTransaction}>
         <h2>Cadastrar transação</h2>
 
-        <input
-          placeholder="Título"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
-        <input
-          placeholder="Valor"
-          value={value}
-          onChange={(event) => setValue(Number(event.target.value))}
-        />
+        <input placeholder="Título" value={title} />
+        <input placeholder="Valor" value={value} />
 
         <TransactionTypeContainer>
           <RadioBox
@@ -80,14 +69,8 @@ export function NewTransactionModal({
           </RadioBox>
         </TransactionTypeContainer>
 
-        <input
-          placeholder="Categoria"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
-        />
-        <button type="submit" onClick={handleCreateNewTransaction}>
-          Cadastrar
-        </button>
+        <input placeholder="Categoria" value={category} />
+        <button type="submit">Cadastrar</button>
       </Container>
     </Modal>
   );

@@ -44,7 +44,6 @@ export const Container = styled.div`
     &:hover {
       filter: brightness(0.9);
       border: 3px solid var(--neongreen);
-      color: var(--neongreen);
     }
   }
 `;
@@ -58,21 +57,14 @@ export const TransactionTypeContainer = styled.div`
 
 interface RadioBox {
   isActive: boolean;
-  activeColor: "green" | "red";
 }
-
-const colors = {
-  green: "#CCFFCC",
-  red: "#FFCCCC",
-};
 
 export const RadioBox = styled.button<RadioBox>`
   height: 4rem;
   border: 1px solid #d7d7d7;
   border-radius: 0.25rem;
 
-  background: ${(props) =>
-    props.isActive ? colors[props.activeColor] : "transparent"};
+  background: transparent;
 
   display: flex;
   align-items: center;
