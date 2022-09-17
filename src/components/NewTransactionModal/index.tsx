@@ -5,6 +5,7 @@ import incomeImg from "../../assets/income.svg"
 import outcomeImg from "../../assets/outcome.svg"
 import { Container, RadioBox, TransactionTypeContainer } from "./style"
 import { useTransactions } from "../../hooks/useTransactions"
+import { back } from "../../services/api"
 
 interface NewTransactionModalProps {
   isOpen: boolean
